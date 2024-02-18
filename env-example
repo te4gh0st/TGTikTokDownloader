@@ -4,3 +4,4 @@ WEBHOOK_HOST=https://domain.ru
 WEBHOOK_PATH=/webhook-tk
 WEBAPP_HOST=localhost
 WEBAPP_PORT=3001
+ADMIN_ID=12345566
