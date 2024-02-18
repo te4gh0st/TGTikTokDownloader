@@ -1,65 +1,65 @@
 <h1 align="center">TGTikTokDownloader</h1>
 
 <p align="center">
-    <img src="./documentation_images/tt.png" width="100" height="100" style="">
+     <img src="./documentation_images/tt.png" width="100" height="100" style="">
 </p>
 
-## Описание
+## Description
 
-Проект TikTok Video Downloader Bot 
-представляет собой автоматизированного бота для мессенджера Telegram,
-разработанного с целью загрузки видео из популярной платформы TikTok по предоставленным ссылкам.
+TikTok Video Downloader Bot Project
+is an automated bot for the Telegram messenger,
+designed to download videos from the popular TikTok platform using the links provided.
 
-### Основные возможности
+### Key Features
 
-- Простота использования: Для загрузки видео достаточно отправить боту ссылку на видео из TikTok,
-после чего пользователь получает запрошенное видео в ответном сообщении.
-- Автоматизированный процесс: Бот уведомляет пользователя обо всех этапах загрузки видео,
-обеспечивая прозрачность и комфорт в использовании.
-- Поддержка режимов Poling и Webhook: Бот может работать в двух режимах: 
-Poling для простой установки на локальном сервере и Webhook для интеграции с облачными платформами,
-обеспечивая гибкость и масштабируемость.
-- Ограниченный доступ: Существует возможность настройки бота таким образом,
-чтобы он был доступен только для администратора,
-обеспечивая дополнительный уровень безопасности и контроля.
-
----
-
-## Инструкции по установке
-Для установки и запуска бота на собственном сервере, следуйте инструкциям:
-
-1. Клонируйте репозиторий проекта на свой локальный компьютер `git clone https://github.com/te4gh0st/TGTikTokDownloader.git`
-2. Установите необходимые зависимости, указанные в файле requirements.txt `python3 -m pip install -r requirements.txt`.
-3. Создайте бота в Telegram через [BotFather](https://t.me/BotFather).
-4. Получите токен бота и настройте переменные окружения.
-5. Запустите бота `python3 main.py`.
+- Ease of use: To download a video, just send the bot a link to the video from TikTok,
+after which the user receives the requested video in a response message.
+- Automated process: The bot notifies the user about all stages of video downloading,
+providing transparency and ease of use.
+- Support for Poling and Webhook modes: The bot can work in two modes:
+Poling for easy installation on a local server and Webhook for integration with cloud platforms,
+providing flexibility and scalability.
+- Limited access: It is possible to configure the bot in such a way
+so that it is accessible only to the administrator,
+providing an additional level of security and control.
 
 ---
 
-## Настройка
+## Installation Instructions
+To install and run the bot on your own server, follow the instructions:
 
-### Переменные окружения
+1. Clone the project repository to your local computer `git clone https://github.com/te4gh0st/TGTikTokDownloader.git`
+2. Install the required dependencies specified in the requirements.txt file `python3 -m pip install -r requirements.txt`.
+3. Create a bot in Telegram via [BotFather](https://t.me/BotFather).
+4. Get the bot token and configure the environment variables.
+5. Run the bot `python3 main.py`.
 
-| ENV            | Обязателен | Значение по умолчанию | Описание                                                                                               |
-|----------------|:----------:|:---------------------:|--------------------------------------------------------------------------------------------------------|
-| TOKEN          |     +      |           -           | Токен Telegram Бота                                                                                    |
-| WEBHOOK_ACTIVE |     -      |           0           | Режим работы<br/>0: Poling \| 1: Webhook                                                               |
-| WEBHOOK_HOST   |     +-     |           -           | Домен - **https-only** (Пример: https://example.com)                                                   |
-| WEBHOOK_PATH   |     +-     |           -           | Url path (Пример: )                                                                                    |
-| WEBHOOK_PATH   |     +-     |           -           | Url path (Пример: <i>/webhook</i>)                                                                     |
-| WEBAPP_HOST    |     -      |       localhost       | Хост на котором запущено приложение                                                                    |
-| WEBAPP_PORT    |     +-     |           -           | Порт на котором запущено приложение                                                                    |
-| ADMIN_ID       |     -      |           0           | Telegram ID пользователя, для которого бот будет работать. Если не указано, то будет работать для всех |
+---
 
-### Пример пути Webhook для NGINX
+## Settings
+
+### Environment Variables
+
+| ENV | Required | Default | Description |
+|----------------|:----------:|:------------------ ---:|-------------------------------------------- -------------------------------------------------- ---------|
+| TOKEN | + | - | Telegram Bot Token |
+| WEBHOOK_ACTIVE | - | 0 | Operating mode<br/>0: Poling \| 1: Webhook |
+| WEBHOOK_HOST | +- | - | Domain - **https-only** (Example: https://example.com) |
+| WEBHOOK_PATH | +- | - | Url path (Example: ) |
+| WEBHOOK_PATH | +- | - | Url path (Example: <i>/webhook</i>) |
+| WEBAPP_HOST | - | localhost | Host on which the application is running |
+| WEBAPP_PORT | +- | - | Port on which the application is running |
+| ADMIN_ID | - | 0 | Telegram ID of the user for whom the bot will work. If not specified, will work for everyone |
+
+### Example Webhook path for NGINX
 
 ```nginx
 location = /webhook {
-    proxy_pass http://127.0.0.1:3001;
+     proxy_pass http://127.0.0.1:3001;
 }
 ```
 
-### Пример Systemd сервиса
+### Example Systemd service
 ```shell
 # Copy to /etc/systemd/systemd/system
 #sudo systemctl enable <filename>.service
