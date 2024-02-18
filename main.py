@@ -1,3 +1,6 @@
+#  Copyright © 2024 te4gh0st (Vitaliy Timtsurak). All rights reserved.
+#  Licensed under the Apache License, Version 2.0
+
 import asyncio
 
 import aiogram.types
@@ -12,7 +15,7 @@ from tictokAPI import Downloader
 
 @dp.message_handler()
 async def tg_download(message: aiogram.types.Message):
-    if message.from_user.id != ADMIN_ID:
+    if message.from_user.id != ADMIN_ID and ADMIN_ID != 0:
         await message.answer("<i>Привет! Я чат-бот, разработанный для личного использования моим создателем."
                              " К сожалению, я не предназначен для общего публичного использования.\n\n"
                              "Hello! I am a chatbot designed for personal use by my creator."
