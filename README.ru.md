@@ -2,9 +2,14 @@
 
 <p align="center">
     <img src="./documentation_images/tt.png" width="100" height="100" style="">
+
 </p>
 
+<div align="center" markdown>
 
+🌏Русский | [**English**](./README.md) |
+
+</div>
 
 ## Описание
 

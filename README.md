@@ -4,6 +4,12 @@
      <img src="./documentation_images/tt.png" width="100" height="100" style="">
 </p>
 
+<div align="center" markdown>
+
+🌏 English | [**Русский**](./README.ru.md) |
+
+</div>
+
 ## Description
 
 TikTok Video Downloader Bot Project
