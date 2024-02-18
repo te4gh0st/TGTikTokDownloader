@@ -1,0 +1,6 @@
+TOKEN=
+WEBHOOK_ACTIVE=0
+WEBHOOK_HOST=https://domain.ru
+WEBHOOK_PATH=/webhook-tk
+WEBAPP_HOST=localhost
+WEBAPP_PORT=3001
