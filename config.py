@@ -19,4 +19,3 @@ try:
 except TypeError:
     print("Incorrect ADMIN ID")
     exit(-1)
-:str
