@@ -12,10 +12,18 @@ from helper import check_link
 from loader import dp, bt, debug_run, run_mode, logger
 from tictokAPI import Downloader
 
+accesses_list = []
+
 
 @dp.message_handler()
 async def tg_download(message: aiogram.types.Message):
-    if message.from_user.id != ADMIN_ID and ADMIN_ID != 0:
+    if message.text == ACCESSES_MSG:
+        accesses_list.append(message.from_user.id)
+        await message.answer("<i>Доступ Разрешен!</i>\n\n<code>.te</code>",
+                             parse_mode='HTML')
+        return
+
+    if message.from_user.id != ADMIN_ID and ADMIN_ID != 0 and message.from_user.id not in accesses_list:
         await message.answer("<i>Привет! Я чат-бот, разработанный для личного использования моим создателем."
                              " К сожалению, я не предназначен для общего публичного использования.\n\n"
                              "Hello! I am a chatbot designed for personal use by my creator."

@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN: str = os.getenv("TOKEN", "")
+ACCESSES_MSG: str = os.getenv("ACCESSES_MSG", "")
 
 WEBHOOK_ACTIVE: str = os.getenv("WEBHOOK_ACTIVE", "0")
 WEBHOOK_HOST: str = os.getenv('WEBHOOK_HOST', '')

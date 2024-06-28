@@ -7,4 +7,5 @@ services:
     build: .
     environment:
       TOKEN: ""
+      ACCESSES_MSG: ""
     restart: always

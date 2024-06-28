@@ -2,6 +2,7 @@
 #  Licensed under the Apache License, Version 2.0
 
 TOKEN=
+ACCESSES_MSG=
 WEBHOOK_ACTIVE=0
 WEBHOOK_HOST=https://domain.ru
 WEBHOOK_PATH=/webhook-tk
