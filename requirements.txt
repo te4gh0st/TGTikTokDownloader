@@ -7,7 +7,7 @@ requests==2.31.0
 loguru==0.7.2
 beautifulsoup4==4.12.3
 pip==23.2.1
-aiohttp==3.8.6
+aiohttp==3.9.4
 certifi==2024.2.2
 Babel==2.9.1
 setuptools==68.2.0
